@@ -11,25 +11,30 @@ import SwiftUI
 
 struct LockedView: View {
     
-    // MARK: - Variables
+    // MARK: - Properties
     
-    @EnvironmentObject var securityController: SecurityController
+    @EnvironmentObject private var securityController: SecurityController
     
     // MARK: - Body
     
     var body: some View {
-        Button("Unlock") {
-            securityController.authenticate()
+        NavigationStack {
+            Button("Unlock") {
+                securityController.authenticate()
+            }
+            .buttonStyle(BorderedProminentButtonStyle())
+            .navigationTitle("Locked")
         }
     }
-    
 }
 
 // MARK: - Preview
 
-struct LockedView_Previews: PreviewProvider {
-    static var previews: some View {
-        LockedView()
-    }
+#Preview {
+    ContentView()
+        .sheet(isPresented: .constant(true)) {
+            LockedView()
+                .environmentObject(SecurityController())
+                .interactiveDismissDisabled()
+        }
 }
-

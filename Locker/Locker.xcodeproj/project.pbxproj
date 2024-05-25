@@ -57,8 +57,8 @@
 			children = (
 				E961B0C128EFA783009051C9 /* Assets.xcassets */,
 				E961B0BD28EFA781009051C9 /* LockerApp.swift */,
-				E961B0BF28EFA781009051C9 /* ContentView.swift */,
 				E961B0CD28EFCC37009051C9 /* LockedView.swift */,
+				E961B0BF28EFA781009051C9 /* ContentView.swift */,
 				E961B0CB28EFA90B009051C9 /* SecurityController.swift */,
 				E961B0C328EFA783009051C9 /* Preview Content */,
 			);

@@ -11,9 +11,6 @@ import SwiftUI
 
 @main
 struct LockerApp: App {
-    
-    // MARK: - Body
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
